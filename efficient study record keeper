@@ -1,0 +1,139 @@
+import datetime
+def gettime():
+    return datetime.datetime.now()
+def take(k):
+    if k==1:
+        c=int(input("Enter 1 for Physics,2 for Chemistry,3 for Maths and 4 for Biology"))
+        if(c==1):
+            value=input("type here\n")
+            with open("Khushi-phy.txt","a") as op:
+                op.write(str([str(gettime())])+": "+value+"\n")
+            print("Successfully Added")
+        elif(c==2):
+            value=input("type here\n")
+            with open("Khushi-chem.txt","a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 3):
+            value = input("type here\n")
+            with open("Khushi-maths.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 4):
+            value = input("type here\n")
+            with open("Khushi-bio.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+    elif(k==2):
+        c = int(input("enter 1 for physics,2 for chemistry,3 for maths and 4 for biology"))
+        if (c == 1):
+            value = input("type here\n")
+            with open("Aryan-phy.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 2):
+            value = input("type here\n")
+            with open("Aryan-chem.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 3):
+            value = input("type here\n")
+            with open("Aryan-maths.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 4):
+            value = input("type here\n")
+            with open("Aryan-bio.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+    elif(k==3):
+        c = int(input("enter 1 for physics,2 for chemistry,3 for maths and 4 for biology"))
+        if (c == 1):
+            value = input("type here\n")
+            with open("Priya-phy.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 2):
+            value = input("type here\n")
+            with open("Priya-chem.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 3):
+            value = input("type here\n")
+            with open("Priya-maths.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+        elif (c == 4):
+            value = input("type here\n")
+            with open("Priya-bio.txt", "a") as op:
+                op.write(str([str(gettime())]) + ": " + value + "\n")
+            print("Successfully Added ")
+    else:
+        print("plz enter valid input (1(Khushi),2(Aryan),3(Priya)")
+def retrieve(k):
+    if k==1:
+        c = int(input("Enter 1 for Physics,2 for Chemistry,3 for Maths and 4 for Biology"))
+        if(c==1):
+            with open("Khushi-phy.txt") as op:
+                for i in op:
+                    print(i,end="")
+        elif(c==2):
+            with open("Khushi-chem.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 3):
+            with open("Khushi-maths.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 4):
+            with open("Khushi-bio.txt") as op:
+                for i in op:
+                    print(i, end="")
+    elif(k==2):
+        c = int(input("Enter 1 for Physics,2 for Chemistry,3 for Maths and 4 for Biology"))
+        if (c == 1):
+            with open("Aryan-phy.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 2):
+            with open("Aryan-chem.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 3):
+            with open("Aryan-maths.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 4):
+            with open("Aryan-bio.txt") as op:
+                for i in op:
+                    print(i, end="")
+    elif(k==3):
+        c = int(input("Enter 1 for Physics,2 for Chemistry,3 for Maths and 4 for Biology"))
+        if (c == 1):
+            with open("Priya-phy.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 2):
+            with open("Priya-chem.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 3):
+            with open("Priya-maths.txt") as op:
+                for i in op:
+                    print(i, end="")
+        elif (c == 4):
+            with open("Priya-bio.txt") as op:
+                for i in op:
+                    print(i, end="")
+    else:
+        print("Please enter valid input (Khushi,Aryan,Priya)")
+print("Efficient study record keeping system: ")
+a=int(input("Press 1 for log the value and 2 for retrieve "))
+
+if a==1:
+    b = int(input("Press 1 for Khushi 2 for Aryan 3 for Priya "))
+    take(b)
+else:
+    b = int(input("Press 1 for Khushi 2 for Aryan 3 for Priya "))
+    retrieve(b)
+
